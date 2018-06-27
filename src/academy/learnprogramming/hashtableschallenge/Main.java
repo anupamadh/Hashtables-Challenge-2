@@ -28,7 +28,9 @@ public class Main {
         LinkedList<Employee> empRemove = new LinkedList<>();
        
 // iterate over existing linked list of employees and add the unique employees to the hashmap
-// add duplicate employees to the empRemove linked list        
+// add duplicate employees to the empRemove linked list     
+// perform a check for each employee to see if it is already in the hashmap. if it exists add
+// to the empRemove list else add it to the hashmap        
         Iterator<Employee> iter = employees.iterator();
         while (iter.hasNext()) {
         	Employee e = iter.next();
