@@ -27,7 +27,8 @@ public class Main {
         HashMap<Integer, Employee> myMap = new HashMap<Integer, Employee>();
         LinkedList<Employee> empRemove = new LinkedList<>();
        
-        
+// iterate over existing linked list of employees and add the unique employees to the hashmap
+// add duplicate employees to the empRemove linked list        
         Iterator<Employee> iter = employees.iterator();
         while (iter.hasNext()) {
         	Employee e = iter.next();
@@ -39,7 +40,9 @@ public class Main {
         		myMap.put(e.getId(), e );
         	}
         }
-        
+      
+// iterate over the linked list containing the list of employees to be removed and remove them from
+// original linked list        
         Iterator<Employee> iterRemove = empRemove.iterator();
         while (iterRemove.hasNext()) {
         	 Employee e = iterRemove.next();
@@ -49,26 +52,8 @@ public class Main {
         System.out.println("Printing unique list");
         employees.forEach(e -> System.out.println(e));
         
-/*        Iterator<Employee> iterhash = myMap.values().iterator();
-        System.out.println("hashmap");
-        while (iterhash.hasNext()) {
-        		System.out.println(iterhash.next());
-        }
-        
-   */     
 
-//        int[] nums = new int[10];
-//        int[] numsToAdd = { 59382, 43, 6894, 500, 99, -58 };
- //       for (int i = 0; i < numsToAdd.length; i++) {
-//           nums[hash(numsToAdd[i])] = numsToAdd[i];
-    //   }
-//       for (int i = 0; i < nums.length; i++) {
-//            System.out.println(nums[i]);
-//        }
-//    }
 
-   // public static int hash(int value) {
-   //     return Math.abs(value % 10);
     }
     
     
